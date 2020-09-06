@@ -23,7 +23,7 @@
 
   &__second {
     padding: 13vw 0 10vw;
-    background-color: #0f273c;
+    background-color: #fff;
   }
 
   &__container {
@@ -35,7 +35,6 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    text-shadow: #000 0 0 4px;
   }
 
   &__description-text {
@@ -44,16 +43,13 @@
   }
 
   &__demo {
-    position: absolute;
-
-    top: 8.35vw;
-    bottom: 8.35vw;
-    width: 65%;
-    right: 0;
     background-image: url("../images/dest/overview-demo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 140vw;
+    margin-left: auto;
   }
 
   &__row {
@@ -70,12 +66,12 @@
   &__highlight {
     font-size: 46px;
     font-weight: 300;
-    color: #fff;
+    color: #9BB6C7;
     text-transform: uppercase;
   }
 
   &__highlight-text {
-    color: #fff;
+    color: #133C5B;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
@@ -86,7 +82,7 @@
   }
 
   &__text {
-    color: #fff;
+    color: #133C5B;
     margin: 1.5em 0 0 .25em;
   }
 }
@@ -96,29 +92,16 @@
     &__description {
       width: 50%;
       padding-right: 7.4vw;
-      text-shadow: none;
-    }
-
-    &__second {
-      background-color: #fff;
-    }
-
-    &__highlight {
-      color: #9BB6C7;
-    }
-
-    &__highlight-text {
-      color: #133C5B;
-    }
-
-    &__text {
-      color: #133C5B;
     }
 
     &__demo {
+      width: 50%;
+      position: absolute;
       top: 12.35vw;
       bottom: 0;
-      width: 50%;
+      right: 0;
+      height: auto;
+      margin-left: 0;
     }
   }
 }
