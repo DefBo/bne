@@ -1,0 +1,53 @@
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  z-index: 1;
+
+  &__container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hamburger {
+    transform: translateY(5px);
+  }
+
+  .hamburger-box {
+    &:after {
+      content: 'Menu';
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translate(-100%, -50%);
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .top-nav {
+    &__logo-link {
+      width: 220px;
+      height: 53px;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.overview {
+  position: relative;
+
+  &__first {
+    background: #133C5B;
+    color: #fff;
+    padding: 12.35vw 0 14.9vw;
+    position: relative;
+
+    &:after {
+      content: 'Overview';
+      position: absolute;
+      left: 4.5%;
+      top: 12.35vw;
+      text-transform: uppercase;
+      transform: rotate(90deg) translateX(-0.5em);
+      transform-origin: left bottom;
+      font-weight: 700;
+      font-size: 8px;
+      letter-spacing: 8px;
+    }
+  }
+
+  &__second {
+    padding: 13vw 0 10vw;
+    background-color: #0f273c;
+  }
+
+  &__container {
+    width: 77%;
+    margin: 0 auto;
+  }
+
+  &__description {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    text-shadow: #000 0 0 4px;
+  }
+
+  &__description-text {
+    font-weight: 300;
+    font-size: 19px;
+  }
+
+  &__demo {
+    position: absolute;
+
+    top: 8.35vw;
+    bottom: 8.35vw;
+    width: 65%;
+    right: 0;
+    background-image: url("../images/dest/overview-demo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+
+    &:last-of-type {
+      .overview__highlight-text {
+        top: -0.25em;
+      }
+    }
+  }
+
+  &__highlight {
+    font-size: 46px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__highlight-text {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-left: .5em;
+    position: relative;
+    top: -0.85em;
+  }
+
+  &__text {
+    color: #fff;
+    margin: 1.5em 0 0 .25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .overview {
+    &__description {
+      width: 50%;
+      padding-right: 7.4vw;
+      text-shadow: none;
+    }
+
+    &__second {
+      background-color: #fff;
+    }
+
+    &__highlight {
+      color: #9BB6C7;
+    }
+
+    &__highlight-text {
+      color: #133C5B;
+    }
+
+    &__text {
+      color: #133C5B;
+    }
+
+    &__demo {
+      top: 12.35vw;
+      bottom: 0;
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .overview {
+    &__first {
+      &:after {
+        font-size: 10px;
+      }
+    }
+
+    &__description-text {
+      font-size: 2.35vw;
+    }
+
+    &__highlight {
+      font-size: 5.5vw;
+    }
+
+    &__highlight-text {
+      font-size: 1.1vw;
+      top: -1.25em;
+    }
+
+    &__row {
+      &:last-of-type {
+        .overview__highlight-text {
+          top: -0.75em;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 1.1rem;
+      margin: 2.5em 0 0 .5em;
+    }
+  }
+}

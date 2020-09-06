@@ -1,0 +1,42 @@
+body {
+  line-height: 1;
+}
+
+h1 {
+  font-family: benton-sans-wide, sans-serif;
+  letter-spacing: 0.35px;
+  line-height: 1.2;
+  font-size: 22px;
+}
+
+p {
+  line-height: 1.12;
+}
+
+a {
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  p, .btn {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 1150px) {
+  h1 {
+    font-size: 3.5vw;
+  }
+}

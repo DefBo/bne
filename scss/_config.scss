@@ -1,0 +1,76 @@
+// USER VARIABLES SECTION
+
+$accent: #0F273C; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #133C5B; // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$ttcommons: TTCommons, sans-serif; // TTCommons Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+//@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		// font-display: swap; // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2');
+	}
+}
+
+@include font('benton-sans-wide', normal, 400, '../fonts/benton-sans-wide-medium.woff2');
+@include font('benton-sans-compressed', normal, 400, '../fonts/benton-sans-compressed.woff2');
+@include font('TTCommons', normal, 300, '../fonts/TTCommons-Thin.woff2');
+@include font('TTCommons', normal, 400, '../fonts/TTCommons-Regular.woff2');
+@include font('TTCommons', normal, 500, '../fonts/TTCommons-Medium.woff2');
+@include font('TTCommons', normal, 700, '../fonts/TTCommons-Bold.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+:focus {
+	outline: none;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+body {
+	font-family: $ttcommons;
+	font-size: $fontsize;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	overflow-x: hidden;
+	color: $textcolor;
+}
+
+a {
+	transition: opacity .15s linear;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
