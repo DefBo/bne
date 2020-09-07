@@ -6,7 +6,17 @@ h1 {
   font-family: benton-sans-wide, sans-serif;
   letter-spacing: 0.35px;
   line-height: 1.2;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: benton-sans-wide, sans-serif;
   font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  color: #0F283B;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 p {
@@ -26,17 +36,29 @@ a {
 }
 
 @media (min-width: 768px) {
-  p, .btn {
+  p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
     font-size: 1.2rem;
   }
 
   h1 {
     font-size: 4vw;
   }
+
+  h2 {
+    font-size: 3vw;
+  }
 }
 
 @media (min-width: 1150px) {
   h1 {
     font-size: 3.5vw;
+  }
+
+  h2 {
+    font-size: 2.75vw;
   }
 }

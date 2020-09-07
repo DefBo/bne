@@ -8,6 +8,11 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
+
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="libs/accordion/accordion.min.css" />
+
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -89,8 +94,163 @@
         <div class="overview__demo"></div>
     </section>
 
+    <section class="latest-projects">
+        <h2>Latest projects</h2>
+        <p class="latest-projects__description">
+            With a strategic attention to detail and a laser focused commitment
+            to quality and value, BNE prides itself on a vast portfolio of stunning,
+            successful and expertly maintained and managed developments.
+        </p>
+        <a href="#" class="btn btn_solid latest-projects__btn">View Portfolio</a>
+
+        <!--TODO: replace img src with thumbnail instead of full-size image-->
+        <div class="owl-carousel latest-projects__slider">
+            <div class="latest-projects__slider-item">
+                <a data-fancybox="gallery" href="images/dest/latest-projects-slide-4.jpg">
+                    <img src="images/dest/latest-projects-slide-4.jpg" alt="Latest Project Photo">
+                </a>
+            </div>
+            <div class="latest-projects__slider-item">
+                <a data-fancybox="gallery" href="images/dest/latest-projects-slide-5.jpg">
+                    <img src="images/dest/latest-projects-slide-5.jpg" alt="Latest Project Photo">
+                </a>
+            </div>
+            <div class="latest-projects__slider-item">
+                <a data-fancybox="gallery" href="images/dest/latest-projects-slide-3.jpg">
+                    <img src="images/dest/latest-projects-slide-3.jpg" alt="Latest Project Photo">
+                </a>
+            </div>
+            <div class="latest-projects__slider-item">
+                <a data-fancybox="gallery" href="images/dest/latest-projects-slide-2.jpg">
+                    <img src="images/dest/latest-projects-slide-2.jpg" alt="Latest Project Photo">
+                </a>
+            </div>
+            <div class="latest-projects__slider-item">
+                <a data-fancybox="gallery" href="images/dest/latest-projects-slide-1.jpg">
+                    <img src="images/dest/latest-projects-slide-1.jpg" alt="Latest Project Photo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <h2 class="expertise__heading">Our expertise</h2>
+        
+        <div class="expertise__row">
+            <div class="expertise__col">
+                <img src="images/dest/expertise-demo.jpg" alt="Expertise Image" class="expertise__img">
+            </div>
+            <div class="expertise__col expertise__col_content">
+                <div class="accordion-container expertise__accordion">
+                    <div class="ac">
+                        <div class="ac-q" tabindex="0">
+                            <span class="expertise__accordion-number">1</span>
+                            Acquisitions &<br> Pre-Development
+                        </div>
+                        <div class="ac-a">
+                            <p>From market positioning, product development, marketing management, and on-site real estate sales and leasing, BNE’s in-house marketing division strategically leverages each community’s unique design elements, lifestyle amenities, and location to create a cohesive brand experience that ultimately ensures the property’s success.</p>
+                        </div>
+                    </div>
+
+                    <div class="ac">
+                        <div class="ac-q" tabindex="0">
+                            <span class="expertise__accordion-number">2</span>
+                            Construction
+                        </div>
+                        <div class="ac-a">
+                            <p>From market positioning, product development, marketing management, and on-site real estate sales and leasing, BNE’s in-house marketing division strategically leverages each community’s unique design elements, lifestyle amenities, and location to create a cohesive brand experience that ultimately ensures the property’s success.</p>
+                        </div>
+                    </div>
+
+                    <div class="ac">
+                        <div class="ac-q" tabindex="0">
+                            <span class="expertise__accordion-number">3</span>
+                            Property<br> Management
+                        </div>
+                        <div class="ac-a">
+                            <p>From market positioning, product development, marketing management, and on-site real estate sales and leasing, BNE’s in-house marketing division strategically leverages each community’s unique design elements, lifestyle amenities, and location to create a cohesive brand experience that ultimately ensures the property’s success.</p>
+                        </div>
+                    </div>
+
+                    <div class="ac">
+                        <div class="ac-q" tabindex="0">
+                            <span class="expertise__accordion-number">4</span>
+                            Sales & Leasing
+                        </div>
+                        <div class="ac-a">
+                            <p>From market positioning, product development, marketing management, and on-site real estate sales and leasing, BNE’s in-house marketing division strategically leverages each community’s unique design elements, lifestyle amenities, and location to create a cohesive brand experience that ultimately ensures the property’s success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="libs/accordion/accordion.min.js"></script>
 
 	<script src="js/app.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                margin: 22,
+                loop: true,
+                center: true,
+                nav: true,
+                dots: false,
+                responsive:{
+                    0:{
+                        items:1,
+                        stagePadding: 60,
+                    },
+                    768:{
+                        items:3,
+                        stagePadding: 80,
+                    },
+                    1150:{
+                        items:4,
+                        center: false,
+                        stagePadding: 80,
+                    },
+                }
+            });
+
+            $('[data-fancybox="gallery"]').fancybox({
+                loop: true,
+                infobar: false,
+                buttons: [
+                    //"zoom",
+                    "share",
+                    "slideShow",
+                    "fullScreen",
+                    //"download",
+                    //"thumbs",
+                    "close"
+                ],
+            });
+
+            new Accordion('.accordion-container', {
+                itemNumber: 3,
+                showItem: true,
+                onToggle: function(currentElement, allElements) {
+                    console.log(currentElement);
+                }
+            });
+
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 150) {
+                    $(".top-nav").addClass("top-nav_solid");
+                } else {
+                    $(".top-nav").removeClass("top-nav_solid");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
