@@ -1,0 +1,44 @@
+.contact {
+  padding: 15vw 0;
+  background-color: #A7C5DD;
+  text-align: center;
+  position: relative;
+
+  &:after {
+    content: 'Contact';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    text-transform: uppercase;
+    transform: rotate(90deg) translate(50%, 100%);
+    transform-origin: right bottom;
+    font-weight: 700;
+    font-size: 8px;
+    letter-spacing: 8px;
+    color: #0F283B;
+  }
+
+  &__title {
+    color: #fff;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    &:after {
+      font-size: 10px;
+      right: 4.5vw;
+      transform: rotate(90deg) translate(3em, 100%);
+    }
+
+    &__btn {
+      margin-top: 2.5vw;
+    }
+  }
+}
