@@ -1,0 +1,145 @@
+.portfolio {
+  padding: 48px 0 32px;
+
+  &__container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  &__description {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto 24px;
+    padding: 0 16px;
+  }
+
+  &__buttons {
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .btn {
+      margin: 6px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    margin: 12px 0;
+  }
+
+  &__item-name {
+    color: #133C5B;
+    margin-top: 10px;
+    display: block;
+  }
+
+  &__item-location {
+    color: #00000065;
+  }
+
+  &__item-name,
+  &__item-location {
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__image-wrap {
+    display: block;
+    width: 100%;
+    padding-top: 78.5%;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: #C2D5E2;
+  }
+
+  &__overlay-title {
+    max-width: 80%;
+  }
+
+  &__overlay-logo {
+    display: block;
+    width: 33.3333%;
+    height: auto;
+  }
+}
+
+@media (min-width: 480px) {
+  .portfolio {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    padding: 8vw 0 6vw;
+
+    &__buttons {
+      margin-bottom: 2vw;
+
+      .btn {
+        margin: 0.75vw;
+      }
+    }
+
+    &__description {
+      max-width: 40%;
+      margin: 0 auto 6vw;
+    }
+
+    &__item {
+      width: 33.3333%;
+      margin: 1vw 0;
+    }
+
+    &__container {
+      width: 86%;
+      padding: 0;
+    }
+
+    &__item-name,
+    &__item-location {
+      text-align: left;
+    }
+
+    &__overlay {
+      padding: 2vw 0;
+    }
+  }
+}

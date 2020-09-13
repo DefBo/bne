@@ -5,12 +5,27 @@
   height: 100%;
   color: #fff;
   background-color: #0F273C;
-  background-image: url("../images/dest/hero-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
   text-align: center;
+
+  &_home {
+    background-image: url("../images/dest/hero-bg.jpg");
+
+    &:before {
+      background-color: rgba(#1B4769, 0.4);
+    }
+  }
+
+  &_portfolio {
+    background-image: url("../images/dest/portfolio-hero.jpg");
+
+    &:before {
+      background-color: rgba(0,0,0,0.33);
+    }
+  }
 
   &:before {
     content: '';
@@ -19,7 +34,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(#1B4769, 0.4);
   }
 
   &__content {

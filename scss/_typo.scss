@@ -19,6 +19,15 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: benton-sans-wide, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 p {
   line-height: 1.12;
 }
@@ -51,6 +60,10 @@ a {
   h2 {
     font-size: 2.75vw;
   }
+
+  h3 {
+    font-size: 2.5vw;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -60,5 +73,9 @@ a {
 
   h2 {
     font-size: 2.5vw;
+  }
+
+  h3 {
+    font-size: 2.25vw;
   }
 }
