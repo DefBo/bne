@@ -11,32 +11,34 @@
   &__btn {
     margin-bottom: 4.7em;
   }
-}
 
-// Owl Carousel changes
-.owl-carousel .owl-stage {
-  display: flex;
-  align-items: center;
-}
+  // Owl Carousel changes
+  .owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+  }
 
-.owl-prev, .owl-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  width: 40px;
-}
+  .owl-prev, .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 40px;
+  }
 
-.owl-prev {
-  left: 0;
-}
+  .owl-prev {
+    left: 0;
+  }
 
-.owl-next {
-  right: 0;
+  .owl-next {
+    right: 0;
+  }
 }
 
 @media (min-width: 768px) {
-  .owl-prev, .owl-next {
-    width: 60px;
+  .latest-projects {
+    .owl-prev, .owl-next {
+      width: 60px;
+    }
   }
 }

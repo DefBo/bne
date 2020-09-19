@@ -1,0 +1,274 @@
+.project {
+  &__image-wrap {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(#1B4769, 0.4);
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  &__header {
+    padding: 24px 0 32px;
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  &__sub {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: #0F283B;
+
+    & + & {
+      margin-left: 1vw;
+    }
+  }
+
+  &__content, &__slider {
+    padding-bottom: 16px;
+  }
+
+  &__content-container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__content-col {
+    flex: 1;
+
+    &:first-child {
+      flex: 0 0 64%;
+    }
+  }
+
+  &__description {
+    margin: 24px 0 16px 0;
+  }
+
+  &__info {
+    margin: 6px 0 16px;
+
+    a {
+      color: #133c5b;
+    }
+  }
+
+  &__highlight {
+    font-size: 46px;
+    font-weight: 300;
+    color: #9BB6C7;
+    text-transform: uppercase;
+  }
+
+  &__highlight-text {
+    color: #133C5B;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-left: .5em;
+    margin-top: 1em;
+    position: relative;
+    top: -0.85em;
+  }
+
+  &__highlight-row {
+    display: flex;
+    align-items: flex-end;
+    margin: 1em 0;
+  }
+
+  &__slider {
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      width: 40px;
+      transition: 0.25s linear;
+
+      &.disabled {
+        opacity: 0.35;
+        pointer-events: none;
+        color: rgba(#0F283B, 0.8) !important;
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+
+    .owl-stage-outer {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__slider-item {
+    position: relative;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    p {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transform: translateY(100%);
+      margin-left: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    &__location {
+      font-size: 14px;
+    }
+
+    &__slider {
+      width: 70%;
+      margin: 0 auto;
+
+      .owl-prev, .owl-next {
+        top: calc(50% - 30px);
+        bottom: auto;
+        opacity: 1;
+        width: auto;
+      }
+
+      .owl-prev {
+        left: -3vw;
+        transform: translate(-100%, -50%);
+      }
+
+      .owl-next {
+        right: -3vw;
+        transform: translate(100%, -50%);
+      }
+    }
+
+    &__image-wrap {
+      padding-top: 43.5%;
+    }
+
+    &__header {
+      padding: 3vw 0 6vw;
+    }
+
+    &__content-container {
+      padding: 0;
+      width: 77.8%;
+      margin: 0 auto;
+      flex-direction: row;
+    }
+
+    &__header-container {
+      padding: 0 4.9% 0 11.1%;
+    }
+
+    &__description {
+      width: 50%;
+      margin: 0 0 4vw 0;
+    }
+
+    &__info {
+      margin: 6px 0 2vw;
+    }
+
+    &__slider-item {
+      &:before {
+        padding-top: 66%;
+      }
+
+      p {
+        margin-left: 0;
+      }
+    }
+
+    &__content, &__slider {
+      padding-bottom: 5vw;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .project {
+    &__title {
+      font-size: 2.35vw;
+    }
+
+    &__highlight {
+      font-size: 5.5vw;
+    }
+
+    &__highlight-text {
+      font-size: 1.1vw;
+      top: -1.25em;
+    }
+  }
+}
