@@ -1,5 +1,8 @@
 .portfolio {
   padding: 48px 0 32px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
 
   &__container {
     width: 100%;

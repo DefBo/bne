@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>BNE</title>
+	<title>BNE Real Estate Group | Luxury Rental Communities</title>
 	<meta name="description" content="BNE">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
@@ -24,7 +24,7 @@
                 <img src="images/dest/logo-white.svg" alt="BNE Logo" class="top-nav__logo">
             </a>
 
-            <button class="hamburger hamburger--slider" type="button">
+            <button class="hamburger hamburger--slider" id="hamburger" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -32,7 +32,7 @@
         </div>
     </section>
 
-    <section class="nav">
+    <section class="nav" id="nav">
         <ul>
             <li><a href="./" class="nav__link _active">Home</a></li>
             <li><a href="./portfolio.html" class="nav__link">Portfolio</a></li>
@@ -42,9 +42,9 @@
 
 	<section class="hero hero_home">
 		<div class="hero__content">
-			<h1 class="uppercase">We bring the<br>experience</h1>
+			<h1 class="uppercase hero__title">We bring the<br>experience</h1>
 			<p class="capitalize hero__description">A full-service real estate development<br>firm with over 60 years of experience</p>
-			<a href="#" class="btn btn_outline">Discover</a>
+			<a href="#" class="btn btn_outline hero__btn">Discover</a>
 		</div>
 
 		<a href="#overview" class="hero__arrow">Scroll down</a>
@@ -64,7 +64,7 @@
         <div class="overview__first">
             <div class="overview__container">
                 <div class="overview__description">
-                    <p class="overview__description-text">
+                    <p class="overview__description-text scrl scrl_left">
                         BNE Real Estate Group is a national, family-owned organization with over 60 years of experience in the development, investment, ownership and management of high-quality and vastly diversified real estate assets.
                     </p>
                 </div>
@@ -74,45 +74,45 @@
         <div class="overview__second">
             <div class="overview__container">
                 <div class="overview__description">
-                    <div class="overview__row">
+                    <div class="overview__row scrl scrl_left">
                         <div class="overview__highlight">60</div>
                         <div class="overview__highlight-text">Years of experience</div>
                     </div>
 
-                    <div class="overview__row">
+                    <div class="overview__row scrl scrl_left">
                         <div class="overview__highlight">8,000</div>
                         <div class="overview__highlight-text">Managed<br>apartments</div>
                     </div>
 
-                    <div class="overview__row">
+                    <div class="overview__row scrl scrl_left">
                         <div class="overview__highlight">1 million</div>
                     </div>
 
-                    <div class="overview__row">
+                    <div class="overview__row scrl scrl_left">
                         <div class="overview__highlight-text">Square feet of<br>commercial space</div>
                     </div>
 
-                    <p class="overview__text">
+                    <p class="overview__text scrl scrl_left">
                         As a full-service real estate firm, BNE Real Estate Group’s talented team of professionals drive the development process from the early acquisition phases through design, construction, marketing, and eventually sales/leasing until every home has been occupied.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="overview__demo"></div>
+        <div class="overview__demo scrl scrl_right"></div>
     </section>
 
     <section class="latest-projects">
-        <h2>Latest projects</h2>
-        <p class="latest-projects__description">
+        <h2 class="scrl scrl_up">Latest projects</h2>
+        <p class="latest-projects__description scrl scrl_up">
             With a strategic attention to detail and a laser focused commitment
             to quality and value, BNE prides itself on a vast portfolio of stunning,
             successful and expertly maintained and managed developments.
         </p>
-        <a href="#" class="btn btn_solid latest-projects__btn">View Portfolio</a>
+        <a href="#" class="btn btn_solid latest-projects__btn scrl scrl_up">View Portfolio</a>
 
         <!--TODO: replace img src with thumbnail instead of full-size image-->
-        <div class="owl-carousel latest-projects__slider">
+        <div class="owl-carousel latest-projects__slider scrl">
             <div class="latest-projects__slider-item">
                 <a data-fancybox="gallery" href="images/dest/latest-projects-slide-4.jpg">
                     <img src="images/dest/latest-projects-slide-4.jpg" alt="Latest Project Photo">
@@ -142,15 +142,15 @@
     </section>
 
     <section class="expertise">
-        <h2 class="expertise__heading">Our expertise</h2>
+        <h2 class="expertise__heading scrl scrl_up">Our expertise</h2>
         
         <div class="expertise__row">
-            <div class="expertise__col">
+            <div class="expertise__col scrl scrl_left">
                 <img src="images/dest/expertise-demo.jpg" alt="Expertise Image" class="expertise__img">
             </div>
             <div class="expertise__col expertise__col_content">
                 <div class="accordion-container expertise__accordion">
-                    <div class="ac">
+                    <div class="ac scrl scrl_right">
                         <div class="ac-q" tabindex="0">
                             <span class="expertise__accordion-number">1</span>
                             Acquisitions &<br> Pre-Development
@@ -160,7 +160,7 @@
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac scrl scrl_right">
                         <div class="ac-q" tabindex="0">
                             <span class="expertise__accordion-number">2</span>
                             Construction
@@ -170,7 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac scrl scrl_right">
                         <div class="ac-q" tabindex="0">
                             <span class="expertise__accordion-number">3</span>
                             Property<br> Management
@@ -180,7 +180,7 @@
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac scrl scrl_right">
                         <div class="ac-q" tabindex="0">
                             <span class="expertise__accordion-number">4</span>
                             Sales & Leasing
@@ -195,10 +195,10 @@
     </section>
 
     <section class="team">
-        <h2 class="team__heading">Meet the team</h2>
+        <h2 class="team__heading scrl scrl_up">Meet the team</h2>
 
         <div class="team__accordion">
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">LARRY PANTIRER</div>
                     <p class="team__member-role">Partner</p>
@@ -211,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">HOWARD SCHWARTZ</div>
                     <p class="team__member-role">Partner</p>
@@ -224,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">ALAN PINES</div>
                     <p class="team__member-role">Partner</p>
@@ -237,7 +237,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">JONATHAN SCHWARTZ</div>
                     <p class="team__member-role">Partner</p>
@@ -250,7 +250,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">RHONDA TAYLOE-CALINDA</div>
                     <p class="team__member-role">Chief Financial Officer</p>
@@ -263,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">DAVID PANTIRER</div>
                     <p class="team__member-role">Partner</p>
@@ -279,7 +279,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">MARC PANTIRER</div>
                     <p class="team__member-role">Partner</p>
@@ -295,7 +295,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">SETH COHEN</div>
                     <p class="team__member-role">Executive Vice President, Head of Operations</p>
@@ -311,7 +311,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">AYTAN GABAI</div>
                     <p class="team__member-role">Executive Vice President, Head of Construction</p>
@@ -324,7 +324,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">TRACY PECK</div>
                     <p class="team__member-role">Executive Vice President, Head of Property Management</p>
@@ -340,7 +340,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_left">
                 <div class="team__member-toggle">
                     <div class="team__member-name">CHUCK THOMAS</div>
                     <p class="team__member-role">Vice President of Land Development</p>
@@ -353,7 +353,7 @@
                 </div>
             </div>
 
-            <div class="team__member">
+            <div class="team__member scrl scrl_right">
                 <div class="team__member-toggle">
                     <div class="team__member-name">TOM WITHEREL</div>
                     <p class="team__member-role">Vice President of Design and Architecture</p>
@@ -369,15 +369,12 @@
                     </p>
                 </div>
             </div>
-
-
-
         </div>
     </section>
 
     <section class="contact">
-        <h2 class="contact__title">Let’s connect<br> and shape what’s next.</h2>
-        <a href="#" class="btn btn_solid contact__btn">Contact</a>
+        <h2 class="contact__title scrl scrl_up">Let’s connect<br> and shape what’s next.</h2>
+        <a href="#" class="btn btn_solid contact__btn scrl scrl_up">Contact</a>
     </section>
 
     <footer class="footer">
@@ -409,6 +406,7 @@
     <script src="libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="libs/accordion/accordion.min.js"></script>
+    <script src="libs/scroll-magic/ScrollMagic.min.js"></script>
 
 	<script src="js/app.min.js"></script>
 
@@ -453,27 +451,9 @@
                 }
             });
 
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-
-                if (scroll >= 150) {
-                    $(".top-nav").addClass("top-nav_solid");
-                } else {
-                    $(".top-nav").removeClass("top-nav_solid");
-                }
-            });
-
             $('.team__member-toggle').on('click', function() {
                 $(this).toggleClass('on');
                 $(this).next(".team__member-description").slideToggle(300);
-            });
-
-            $(document).on('click', 'a[href^="#"]', function (event) {
-                event.preventDefault();
-
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
             });
         });
     </script>

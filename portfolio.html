@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>BNE</title>
+	<title>BNE Real Estate Group | Luxury Rental Communities</title>
 	<meta name="description" content="BNE">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
@@ -223,30 +223,12 @@
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="libs/accordion/accordion.min.js"></script>
     <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="libs/scroll-magic/ScrollMagic.min.js"></script>
 
 	<script src="js/app.min.js"></script>
 
     <script>
         $(document).ready(function(){
-
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-
-                if (scroll >= 150) {
-                    $(".top-nav").addClass("top-nav_solid");
-                } else {
-                    $(".top-nav").removeClass("top-nav_solid");
-                }
-            });
-
-            $(document).on('click', 'a[href^="#"]', function (event) {
-                event.preventDefault();
-
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
-            });
-
             $('.btn._luxury').on('click', function() {
                 $('.portfolio__item:not(._luxury)').hide('fade', 750);
                 $('.portfolio__item._luxury').show('fade', 750);

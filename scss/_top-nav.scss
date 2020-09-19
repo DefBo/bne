@@ -6,6 +6,8 @@
   padding: 2px 0;
   z-index: 3;
   transition: background-color 0.5s linear;
+  transform: translateY(-100%);
+  animation: top-nav-slide-from-top 0.75s ease-in-out 1.35s 1 forwards;
 
   &_solid {
     background-color: rgba(#133c5b, 0.75);
@@ -72,5 +74,15 @@
         font-size: 16px;
       }
     }
+  }
+}
+
+@keyframes top-nav-slide-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

@@ -4,6 +4,8 @@
   padding: 28px 0 44px;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 
   &__container {
     width: calc(100% - 32px);

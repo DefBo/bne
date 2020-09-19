@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>BNE</title>
+	<title>BNE Real Estate Group | Luxury Rental Communities</title>
 	<meta name="description" content="BNE">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
@@ -150,6 +150,7 @@
     <script src="libs/jquery/jquery.min.js"></script>
     <script src="libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="libs/scroll-magic/ScrollMagic.min.js"></script>
 
 	<script src="js/app.min.js"></script>
 
@@ -169,24 +170,6 @@
                         navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-left\"><polyline points=\"15 18 9 12 15 6\"></polyline></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>"],
                     },
                 }
-            });
-
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-
-                if (scroll >= 150) {
-                    $(".top-nav").addClass("top-nav_solid");
-                } else {
-                    $(".top-nav").removeClass("top-nav_solid");
-                }
-            });
-
-            $(document).on('click', 'a[href^="#"]', function (event) {
-                event.preventDefault();
-
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
             });
         });
     </script>

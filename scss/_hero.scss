@@ -4,36 +4,45 @@
   align-items: center;
   height: 100%;
   color: #fff;
-  background-color: #0F273C;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
   text-align: center;
+  animation: fade-in 0.5s ease-in-out 0s 1 forwards;
+  opacity: 0;
 
   &_home {
-    background-image: url("../images/dest/hero-bg.jpg");
+    &:after {
+      background-color: rgba(#1B4769, 0.33);
+    }
 
     &:before {
-      background-color: rgba(#1B4769, 0.4);
+      background-image: url("../images/dest/hero-bg.jpg");
     }
   }
 
   &_portfolio {
-    background-image: url("../images/dest/portfolio-hero.jpg");
+    &:after {
+      background-color: rgba(0,0,0,0.33);
+    }
 
     &:before {
-      background-color: rgba(0,0,0,0.33);
+      background-image: url("../images/dest/portfolio-hero.jpg");
     }
   }
 
-  &:before {
+  &:after, &:before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  &:before {
+    background-color: #0F273C;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__content {
@@ -48,6 +57,9 @@
 
   &__description {
     margin: 14px 0 18px;
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: slide-from-top 0.75s ease-in-out 0.75s 1 forwards;
   }
 
   &__arrow {
@@ -56,12 +68,13 @@
     z-index: 1;
     position: absolute;
     bottom: 45px;
-    left: 50%;
-    transform: translateX(-50%);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 3px;
+    transform-origin: bottom;
+    opacity: 0;
+    animation: bounce 4s ease 2.25s 1 forwards;
 
     @media (orientation: landscape) {
       display: none;
@@ -81,6 +94,18 @@
       margin: 10px auto 0;
     }
   }
+
+  &__title {
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: slide-from-top 0.75s ease-in-out 0.5s 1 forwards;
+  }
+
+  &__btn {
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: slide-from-top 0.75s ease-in-out 1s 1 forwards;
+  }
 }
 
 @media (min-width: 768px) {
@@ -88,6 +113,10 @@
     &__description {
       font-size: 1.2rem;
       margin: 1.198vw 0 1.823vw;
+    }
+
+    &:after, &:before {
+      position: fixed;
     }
 
     @media (orientation: landscape) and (min-height: 479px) {
@@ -99,5 +128,87 @@
         margin-top: -39px;
       }
     }
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+    transform: scale(1,1) translateY(0);
+  }
+
+  17% {
+    transform: scale(1.1,.9) translateY(0);
+  }
+
+  22% {
+    transform: scale(.9,1.1) translateY(-16px);
+  }
+
+  27% {
+    transform: scale(1.05,.95) translateY(0);
+  }
+
+  29% {
+    transform: scale(1,1) translateY(-4px);
+  }
+
+  31% {
+    transform: scale(1,1) translateY(0);
+  }
+
+  34% {
+    transform: scale(1,1) translateY(0);
+  }
+
+  36% {
+    transform: scale(1.1,.9) translateY(0);
+  }
+
+  40% {
+    transform: scale(.9,1.1) translateY(-14px);
+  }
+
+  46% {
+    transform: scale(1.05,.95) translateY(0);
+  }
+
+  48% {
+    transform: scale(1,1) translateY(-4px);
+  }
+
+  50% {
+    transform: scale(1,1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1,1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

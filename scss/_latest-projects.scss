@@ -1,6 +1,22 @@
 .latest-projects {
   padding: 10vw 0;
   text-align: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+
+  &__slider-item {
+    transform: translateX(-32px) scale(0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+
+    .scrl._visible & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0) scale(1);
+    }
+  }
 
   &__description {
     margin: 1.25em auto 2.35em;
@@ -39,6 +55,15 @@
   .latest-projects {
     .owl-prev, .owl-next {
       width: 60px;
+    }
+  }
+}
+
+$elements: 15;
+@for $i from 0 to $elements {
+  .owl-item:nth-child(#{$i + 1}) {
+    .latest-projects__slider-item {
+      transition-delay: #{($i + 1)/10}s !important;
     }
   }
 }

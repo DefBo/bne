@@ -1,0 +1,35 @@
+.scrl {
+  opacity: 0;
+  will-change: transform;
+  transition: 0.5s ease-in-out;
+
+  &_left, &_right {
+    transform: translate(-32px, 0);
+  }
+
+  &_left-zoom {
+    transform: translate(-32px, 0) scale(0.85);
+  }
+
+  &_up {
+    transform: translate(0, -32px);
+  }
+
+  &._visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .scrl {
+    &_right {
+      transform: translate(32px, 0);
+    }
+
+    &._visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+}

@@ -1,5 +1,7 @@
 .overview {
   position: relative;
+  background-color: #fff;
+  z-index: 1;
 
   &__first {
     background: #133C5B;
@@ -47,9 +49,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    box-sizing: border-box;
     height: 140vw;
-    margin-left: auto;
+    width: 100%;
+    transition-delay: 0.15s !important;
+    transition-duration: 0.75s !important;
   }
 
   &__row {
@@ -101,7 +105,6 @@
       bottom: 0;
       right: 0;
       height: auto;
-      margin-left: 0;
     }
   }
 }

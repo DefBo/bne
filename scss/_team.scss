@@ -1,6 +1,9 @@
 .team {
   position: relative;
   padding: 10vw 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
 
   &__heading {
     margin-bottom: 24px;
