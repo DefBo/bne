@@ -50,6 +50,10 @@
     z-index: 1;
     margin-top: -39px;
 
+    h1 {
+      text-shadow: 5px 5px 99px #00000029;
+    }
+
     @media (orientation: landscape) {
       margin-top: 0;
     }
@@ -106,6 +110,15 @@
     transform: translateY(-15px);
     animation: slide-from-top 0.75s ease-in-out 1s 1 forwards;
   }
+
+  &__video {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -115,8 +128,8 @@
       margin: 1.198vw 0 1.823vw;
     }
 
-    &:after, &:before {
-      position: fixed;
+    &__video {
+      display: block;
     }
 
     @media (orientation: landscape) and (min-height: 479px) {
@@ -128,87 +141,5 @@
         margin-top: -39px;
       }
     }
-  }
-}
-
-@keyframes slide-from-top {
-  0% {
-    transform: translateY(-15px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    opacity: 0;
-  }
-
-  15% {
-    opacity: 1;
-    transform: scale(1,1) translateY(0);
-  }
-
-  17% {
-    transform: scale(1.1,.9) translateY(0);
-  }
-
-  22% {
-    transform: scale(.9,1.1) translateY(-16px);
-  }
-
-  27% {
-    transform: scale(1.05,.95) translateY(0);
-  }
-
-  29% {
-    transform: scale(1,1) translateY(-4px);
-  }
-
-  31% {
-    transform: scale(1,1) translateY(0);
-  }
-
-  34% {
-    transform: scale(1,1) translateY(0);
-  }
-
-  36% {
-    transform: scale(1.1,.9) translateY(0);
-  }
-
-  40% {
-    transform: scale(.9,1.1) translateY(-14px);
-  }
-
-  46% {
-    transform: scale(1.05,.95) translateY(0);
-  }
-
-  48% {
-    transform: scale(1,1) translateY(-4px);
-  }
-
-  50% {
-    transform: scale(1,1) translateY(0);
-  }
-
-  100% {
-    transform: scale(1,1) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

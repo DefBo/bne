@@ -69,7 +69,7 @@
                     <a href="#" class="project__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </a>
-                    <a href="#" class="project__link">
+                    <a href="./portfolio.html" class="project__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                     </a>
                 </div>
@@ -79,33 +79,48 @@
         <div class="project__content">
             <div class="project__content-container">
                 <div class="project__content-col">
-                    <p class="project__description">Set along the Harrison waterfront, this refined collection of studio, one and two bedroom rental residences combines with a curated menu of club-style amenities to create a one-of-a-kind lifestyle opportunity that feels as exclusive as it is connected.</p>
+                    <p class="project__description scrl scrl_left">Set along the Harrison waterfront, this refined collection of studio, one and two bedroom rental residences combines with a curated menu of club-style amenities to create a one-of-a-kind lifestyle opportunity that feels as exclusive as it is connected.</p>
 
-                    <div class="project__sub">Status</div>
-                    <p class="project__info">Now Leasing. Completed 2018</p>
+                    <div class="scrl scrl_left">
+                        <div class="project__sub">Status</div>
+                        <p class="project__info">Now Leasing. Completed 2018</p>
+                    </div>
 
-                    <div class="project__sub">Website</div>
-                    <p class="project__info">
-                        <a href="1harrison.com">1harrison.com</a>
-                    </p>
+                    <div class="scrl scrl_left">
+                        <div class="project__sub">Website</div>
+                        <p class="project__info">
+                            <a href="1harrison.com">1harrison.com</a>
+                        </p>
+                    </div>
 
-                    <div class="project__sub">Address</div>
-                    <p class="project__info">1 Harrison Avenue, Harrison, NJ</p>
+                    <div class="scrl scrl_left">
+                        <div class="project__sub">Address</div>
+                        <p class="project__info">1 Harrison Avenue, Harrison, NJ</p>
+                    </div>
+
                 </div>
                 <div class="project__content-col">
-                    <div class="project__highlight">Residential</div>
-                    <div class="project__highlight-text">project</div>
-                    <div class="project__highlight-row">
-                        <div class="project__highlight">485</div>
-                        <div class="project__highlight-text">apartments</div>
+                    <div class="scrl scrl_right">
+                        <div class="project__highlight">Residential</div>
+                        <div class="project__highlight-text">project</div>
                     </div>
-                    <div class="project__highlight">40,000</div>
-                    <div class="project__highlight-text">Square feet of amenities</div>
+
+                    <div class="scrl scrl_right">
+                        <div class="project__highlight-row">
+                            <div class="project__highlight">485</div>
+                            <div class="project__highlight-text">apartments</div>
+                        </div>
+                    </div>
+
+                    <div class="scrl scrl_right">
+                        <div class="project__highlight">40,000</div>
+                        <div class="project__highlight-text">Square feet of amenities</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="owl-carousel project__slider">
+        <div class="owl-carousel project__slider scrl scrl_up">
             <div class="project__slider-item">
                 <a data-fancybox="gallery" href="images/dest/latest-projects-slide-5.jpg">
                     <img src="images/dest/latest-projects-slide-5.jpg" alt="Latest Project Photo">
@@ -156,6 +171,14 @@
 
     <script>
         $(document).ready(function(){
+            $('[data-fancybox="gallery"]').fancybox({
+                loop: true,
+                infobar: false,
+                buttons: [
+                    "close"
+                ],
+            });
+
             $('.project__slider').owlCarousel({
                 items: 1,
                 center: true,

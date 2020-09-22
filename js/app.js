@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             new ScrollMagic.Scene({
                 triggerElement: revealItem[i],
                 offset: 0,
-                triggerHook: 0.75,
+                triggerHook: 0.749999,
             })
                 .setClassToggle(revealItem[i], '_visible')
                 .addTo(controller);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             new ScrollMagic.Scene({
                 triggerElement: revealItem[i],
                 offset: 0,
-                triggerHook: 0.85,
+                triggerHook: 0.849999,
             })
                 .setClassToggle(revealItem[i], '_visible')
                 .addTo(controller);

@@ -3,6 +3,8 @@
     width: 100%;
     padding-top: 100%;
     position: relative;
+    animation: fade-in .5s ease-in-out 0s 1 forwards;
+    opacity: 0;
 
     &:before {
       content: '';
@@ -31,6 +33,9 @@
 
   &__header {
     padding: 24px 0 32px;
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: slide-from-top .75s ease-in-out .5s 1 forwards;
   }
 
   &__header-container {

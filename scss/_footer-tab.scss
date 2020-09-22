@@ -21,6 +21,7 @@
     font-family: benton-sans-compressed, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
+    -webkit-font-smoothing: antialiased;
 
     & + & {
       margin-left: 20px;
@@ -41,15 +42,5 @@
     &__container {
       padding: 11px 0 10px;
     }
-  }
-}
-
-@keyframes footer-tab-slide-from-bottom {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 }
